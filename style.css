@@ -1,0 +1,131 @@
+:root {
+    --primary-dark: #333;
+    --primary-light-dark: #696969;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-family: "Roboto", sans-serif;
+}
+
+button,
+input {
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+/* header  */
+
+.header {
+    padding: 30px;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+/* main  */
+
+.main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 200px;
+}
+
+span {
+    font-size: larger;
+    margin-bottom: -15px;
+    font-style: inherit;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+button,
+input[type="color"] {
+    transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+button.active {
+    background-color: var(--primary-light-dark);
+    color: var(--primary-light);
+    transform: scale(1.05);
+}
+
+input[type="color"] {
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.size-value {
+    margin-bottom: -10px;
+    font-size: 20px;
+}
+
+.grid-Size {
+    background-color: var(--primary-light);
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* grid  */
+
+.grid {
+    display: grid;
+    width: 700px;
+    height: 700px;
+    background-color: var(--secondary-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.grid-cell {
+    background-color: white;
+}
+
+.show-border {
+    border: 1px solid #ccc;
+}
